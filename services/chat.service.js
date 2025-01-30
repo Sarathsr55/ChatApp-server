@@ -48,7 +48,6 @@ const userChat = async (chat) => {
 }
 
 const deleteChat = async (id)=>{
-    console.log(id);
     
     try {
         const response = await MongoDB.db.collection(mongoConfig.collections.CHAT).deleteOne({_id:ObjectID(id)})
